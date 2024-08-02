@@ -53,6 +53,10 @@
                     followersElement.innerText = json.followers;
                     repos.innerText = json.public_repos;
                     linkElement.href = json.html_url;
+                }).catch(function(error) {
+                    console.error('Ocorreu um erro ao carregar os dados', error);
+                }).finally(function() {
+                    console.log('Dados carregados com sucesso');
                 })
         })
     </script>
